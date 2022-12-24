@@ -44,6 +44,7 @@ const imagePaths = [
 
   &__arrow {
     bottom: 0 !important;
+    top: unset !important;
   }
 
   &__button {
