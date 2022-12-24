@@ -33,7 +33,6 @@ header {
 @media (min-width: 1024px) {
   header {
     display: flex;
-    /* place-items: center; */
   }
 
   header .wrapper {
