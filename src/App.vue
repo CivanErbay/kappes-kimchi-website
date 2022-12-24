@@ -1,16 +1,28 @@
-<script setup>
+<script>
+import { defineComponent } from "vue";
 import Logo from "./components/Logo.vue";
+import ImgCarousel from "./components/ImgCarousel.vue";
+import { ElConfigProvider } from "element-plus";
+
+export default defineComponent({
+  components: {
+    ElConfigProvider,
+  },
+});
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      
-      <Logo msg="kappeskimchi" />
-    </div>
-  </header>
+  <el-config-provider>
+    <header>
+      <div class="wrapper">
+        <Logo msg="kappeskimchi" />
+      </div>
+    </header>
 
-  <main></main>
+    <main>
+      <ImgCarousel></ImgCarousel>
+    </main>
+  </el-config-provider>
 </template>
 
 <style scoped>
