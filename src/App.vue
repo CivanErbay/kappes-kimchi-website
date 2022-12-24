@@ -2,6 +2,7 @@
 import { defineComponent } from "vue";
 import Logo from "./components/Logo.vue";
 import ImgCarousel from "./components/ImgCarousel.vue";
+import DividerTextContent from "./components/DividerTextContent.vue";
 import { ElConfigProvider } from "element-plus";
 
 export default defineComponent({
@@ -21,6 +22,7 @@ export default defineComponent({
 
     <main>
       <ImgCarousel></ImgCarousel>
+      <DividerTextContent></DividerTextContent>
     </main>
   </el-config-provider>
 </template>
