@@ -17,6 +17,11 @@ defineProps({
 <style scoped lang="scss">
 .logo {
   display: flex;
+  //padding: 400px;
+  position: relative;
+  animation-name: logoAnim;
+  animation-duration: 3s;
+  animation-delay: 0;
 }
 
 h1 {
@@ -29,19 +34,20 @@ h1 {
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 18px;
   font-weight: bold;
+  margin-top: -7px;
 }
 
-.logo h1,
-.logo h3 {
-  text-align: center;
-}
-
-@media (min-width: 1024px) {
-  .logo h1,
-  .logo h3 {
-    text-align: left;
+@keyframes logoAnim {
+  0% {
+    padding: 400px;
+  }
+  50% {
+    padding: 400px;
+  }
+  100% {
+    padding: 0px;
   }
 }
 </style>

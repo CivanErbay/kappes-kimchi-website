@@ -34,7 +34,6 @@ const imagePaths = [
   .subheadline {
     font-size: 1.6em;
     font-weight: bold;
-    font-family: "Josefin Sans", sans-serif;
   }
 }
 </style>

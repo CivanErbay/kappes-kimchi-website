@@ -1,6 +1,5 @@
 <script>
 import { defineComponent } from "vue";
-import Logo from "./components/Logo.vue";
 import ImgCarousel from "./components/ImgCarousel.vue";
 import DividerTextContent from "./components/DividerTextContent.vue";
 import Navigation from "./components/Navigation.vue";
@@ -20,7 +19,12 @@ export default defineComponent({
     </header>
 
     <main>
-      <ImgCarousel></ImgCarousel>
+      <div>
+        <div>
+          <h3>Willkommen </h3>
+        </div>
+        <ImgCarousel></ImgCarousel>
+      </div>
       <DividerTextContent></DividerTextContent>
     </main>
   </el-config-provider>
