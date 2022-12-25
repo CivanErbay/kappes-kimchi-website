@@ -3,6 +3,7 @@ import { defineComponent } from "vue";
 import Logo from "./components/Logo.vue";
 import ImgCarousel from "./components/ImgCarousel.vue";
 import DividerTextContent from "./components/DividerTextContent.vue";
+import Navigation from "./components/Navigation.vue";
 import { ElConfigProvider } from "element-plus";
 
 export default defineComponent({
@@ -15,9 +16,7 @@ export default defineComponent({
 <template>
   <el-config-provider>
     <header>
-      <div class="wrapper">
-        <Logo msg="kappeskimchi" />
-      </div>
+      <Navigation></Navigation>
     </header>
 
     <main>
@@ -35,12 +34,6 @@ header {
 @media (min-width: 1024px) {
   header {
     display: flex;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
   }
 }
 </style>
