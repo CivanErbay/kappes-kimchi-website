@@ -16,8 +16,8 @@
     <el-sub-menu index="1" class="sub-menu-wrapper">
       <template #title>kappes</template>
       <el-menu-item index="2-1">item one</el-menu-item>
-      <el-menu-item index="2-2">item two</el-menu-item>
-      <el-menu-item index="2-3">item three</el-menu-item>
+      <el-menu-item index="2-2">journey</el-menu-item>
+      <el-menu-item index="2-3">contact</el-menu-item>
     </el-sub-menu>
   </el-menu>
 </template>
