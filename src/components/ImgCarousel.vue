@@ -22,7 +22,8 @@ const imagePaths = [
 
 <style lang="scss">
 .img-carousel {
-  margin-top: 80px;
+  margin-top: 800px;
+
 }
 
 .img-item {

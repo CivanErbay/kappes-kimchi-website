@@ -1,29 +1,14 @@
-<script>
-import { defineComponent } from "vue";
-import ImgCarousel from "./components/ImgCarousel.vue";
-import DividerTextContent from "./components/DividerTextContent.vue";
-import Navigation from "./components/Navigation.vue";
-import { ElConfigProvider } from "element-plus";
-
-export default defineComponent({
-  components: {
-    ElConfigProvider,
-  },
-});
+<script setup>
+import Landing from "./components/Landing.vue";
 </script>
 
 <template>
-  <el-config-provider>
-    <header>
-      <Navigation></Navigation>
-    </header>
+  <header></header>
 
-    <main>
-      <Landing></Landing>
-      <DividerTextContent></DividerTextContent>
-      <ImgCarousel></ImgCarousel>
-    </main>
-  </el-config-provider>
+  <main>
+    <Landing></Landing>
+    <!-- <ImgCarousel></ImgCarousel> -->
+  </main>
 </template>
 
 <style scoped>
@@ -39,5 +24,4 @@ header {
     display: flex;
   }
 }
-
 </style>

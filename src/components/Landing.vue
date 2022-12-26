@@ -5,7 +5,7 @@ import Logo from "./Logo.vue";
 <template>
   <div class="stage-image">
     <Logo msg="kappeskimchi" />
-    <el-image src="./kimchi21.jpg" :fit="fit" />
+    <img src="../assets/kimchi21.jpg" alt="kimchi" />
     <div class="border-box"></div>
   </div>
 </template>
