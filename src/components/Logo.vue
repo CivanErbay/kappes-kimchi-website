@@ -9,7 +9,8 @@ defineProps({
 
 <template>
   <div class="logo green">
-    <h2>김치</h2>
+    <!-- <h2>배추김치</h2> -->
+    <!--  <img style="height: 25px; height: 25px" src="../assets/gärtopf-logo.png" alt=""> -->
     <h1>{{ msg }}</h1>
   </div>
 </template>
@@ -67,8 +68,6 @@ h2 {
 @keyframes logoAnimMobile {
   0% {
     opacity: 0;
-  }
-  20% {
   }
   100% {
     opacity: 1;
