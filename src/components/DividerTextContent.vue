@@ -23,7 +23,7 @@ const imagePaths = [
 
 <style lang="scss">
 .divider-text-content {
-  margin: 60px 0 30px;
+  margin: 660px 0 30px;
 
   .el-divider__text {
     color: white;

@@ -9,12 +9,10 @@
     text-color="white"
     active-text-color="hsla(160, 100%, 37%, 1)"
   >
-    <el-menu-item class="logo-item" index="0"
-      ><Logo msg="kappeskimchi"
-    /></el-menu-item>
+    <el-menu-item class="logo-item" index="0"></el-menu-item>
     <div class="flex-grow" />
     <el-sub-menu index="1" class="sub-menu-wrapper">
-      <template #title>kappes</template>
+      <template #title>Übersicht</template>
       <el-menu-item index="2-1">item one</el-menu-item>
       <el-menu-item index="2-2">journey</el-menu-item>
       <el-menu-item index="2-3">contact</el-menu-item>
@@ -24,7 +22,6 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
-import Logo from "./Logo.vue";
 
 const activeIndex = ref("1");
 const handleSelect = (key: string, keyPath: string[]) => {
@@ -34,7 +31,11 @@ const handleSelect = (key: string, keyPath: string[]) => {
 
 <style lang="scss">
 .flex-grow {
-  flex-grow: 1;
+  flex-grow: 0;
+
+  @media (min-width: 1024px) {
+    flex-grow: 1;
+  }
 }
 
 .navigation-wrapper {
@@ -52,8 +53,21 @@ const handleSelect = (key: string, keyPath: string[]) => {
   background-color: #181818 !important;
 }
 
+.el-sub-menu__title {
+  padding: 0 40px 0 10px !important;
+}
+
+.el-menu--popup {
+  min-width: 115px !important;
+
+  @media (min-width: 1024px) {
+    min-width: 200px;
+  }
+}
+
 .logo-item {
   pointer-events: none;
+  padding: 0 !important;
 }
 
 .sub-menu-wrapper div {

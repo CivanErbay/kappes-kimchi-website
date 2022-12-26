@@ -17,11 +17,26 @@ defineProps({
 <style scoped lang="scss">
 .logo {
   display: flex;
-  //padding: 400px;
-  position: relative;
-  animation-name: logoAnim;
-  animation-duration: 3s;
-  animation-delay: 0;
+  position: absolute;
+  z-index: 3;
+  top: 220px;
+  padding: 3px 12px 0px;
+  background-color: white;
+  width: 58%;
+  right: 11px;
+
+  @media (min-width: 1024px) {
+    animation-name: logoAnim;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    width: fit-content;
+    left: 40%;
+    top: 75%;
+    padding: 6px 20px 3px;
+  }
 }
 
 h1 {
@@ -34,20 +49,44 @@ h1 {
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
-  margin-top: -7px;
+  margin-top: 7px;
+  animation-name: logoAnimMobile;
+  animation-duration: 3s;
+  animation-delay: 0;
+  animation-fill-mode: forwards;
+
+  @media (min-width: 1024px) {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 11px;
+  }
+}
+
+@keyframes logoAnimMobile {
+  0% {
+    opacity: 0;
+  }
+  20% {
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes logoAnim {
   0% {
-    padding: 400px;
+    left: 40%;
+    top: 75%;
   }
-  50% {
-    padding: 400px;
+  20% {
+    background-color: rgb(255, 255, 255, 0);
   }
   100% {
-    padding: 0px;
+    left: 0;
+    top: 50%;
+    background-color: rgb(255, 255, 255, 1);
   }
 }
 </style>

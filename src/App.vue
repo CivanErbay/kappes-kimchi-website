@@ -19,12 +19,7 @@ export default defineComponent({
     </header>
 
     <main>
-      <div>
-        <div>
-          <h3>Willkommen</h3>
-                <el-image style="width: 60vw; height: 60vh" src="./kimchi10.jpg" :fit="fit" />
-        </div>
-      </div>
+      <Landing></Landing>
       <DividerTextContent></DividerTextContent>
       <ImgCarousel></ImgCarousel>
     </main>
@@ -34,6 +29,9 @@ export default defineComponent({
 <style scoped>
 header {
   line-height: 1.5;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
 }
 
 @media (min-width: 1024px) {
@@ -42,20 +40,4 @@ header {
   }
 }
 
-main {
-  animation-name: contentAnim;
-  animation-duration: 1s;
-  animation-delay: 3s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-
-@keyframes contentAnim {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 </style>
