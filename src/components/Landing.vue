@@ -5,7 +5,7 @@ import Logo from "./Logo.vue";
 <template>
   <div class="landing">
     <div class="stage-image">
-      <Logo msg="kappeskimchi" />
+      <Logo msg="kappes" />
       <img src="../assets/kimchi21.jpg" alt="kimchi" />
       <div class="border-box"></div>
     </div>
@@ -53,9 +53,12 @@ import Logo from "./Logo.vue";
       display: flex;
       flex-direction: column;
       justify-content: center;
+      font-weight: 300 !important;
 
       @media (min-width: 1024px) {
+        margin-right: 150px;
         font-size: 42px;
+        text-align: right;
       }
     }
   }

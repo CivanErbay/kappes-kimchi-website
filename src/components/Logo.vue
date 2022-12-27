@@ -10,8 +10,11 @@ defineProps({
 <template>
   <div class="logo green">
     <!-- <h2>배추김치</h2> -->
-    <!--  <img style="height: 25px; height: 25px" src="../assets/gärtopf-logo.png" alt=""> -->
-    <h1>{{ msg }}</h1>
+    <div>
+      <h1>{{ msg }}</h1>
+      <h2>KIMCHI</h2>
+    </div>
+    <img class="logo--img" src="../assets/kappes-green.png" alt="" />
   </div>
 </template>
 
@@ -25,6 +28,10 @@ defineProps({
   background-color: white;
   width: 58%;
   right: 11px;
+
+  &--img {
+    height: 115px;
+  }
 
   @media (min-width: 1024px) {
     animation-name: logoAnim;
@@ -43,6 +50,8 @@ defineProps({
 h1 {
   font-weight: 500;
   font-size: 1.6rem;
+  font-family: "Aclonica", sans-serif;
+  color: #181818;
 
   @media (min-width: 1024px) {
     font-size: 2.6rem;
@@ -50,18 +59,18 @@ h1 {
 }
 
 h2 {
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 7px;
+  font-size: 24px;
+  /* font-weight: bold;
+  margin-top: 7px; */
   animation-name: logoAnimMobile;
   animation-duration: 3s;
   animation-delay: 0;
   animation-fill-mode: forwards;
 
   @media (min-width: 1024px) {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 11px;
+    font-size: 36px;
+    /* font-weight: bold; */
+    /* margin-top: 11px; */
   }
 }
 
