@@ -1,0 +1,52 @@
+@import "./base.css";
+
+#app {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 300;
+  color: #181818;
+
+  @media (min-width: 1024px) {
+    padding: 2rem;
+  }
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+p {
+  font-size: 18px;
+
+  @media (min-width: 1024px) {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+}
+
+.headline-l {
+  font-size: 2.4em;
+  font-weight: 600;
+
+  @media (min-width: 1024px) {
+    font-size: 3.2em;
+  }
+}
+.headline-m {
+  font-size: 2em;
+
+  @media (min-width: 1024px) {
+    font-size: 2.6em;
+  }
+}
+.headline-s {
+  font-size: 1.2em;
+
+  @media (min-width: 1024px) {
+    font-size: 2em;
+  }
+}

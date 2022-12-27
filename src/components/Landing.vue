@@ -6,67 +6,18 @@ import Logo from "./Logo.vue";
   <div class="landing">
     <div class="stage-image">
       <Logo msg="kappes" />
-      <img src="../assets/kimchi21.jpg" alt="kimchi" />
+      <img class="stage-image__img" src="../assets/kimchi21.jpg" alt="kimchi" />
       <div class="border-box"></div>
-    </div>
-
-    <div class="landing--subheadline">
-      <div class="landing--subheadline__text">
-        <h5>biologisch & regional</h5>
-        <h5>traditionell & handgemacht</h5>
-        <h5>probiotisch & unpasteurisiert</h5>
-      </div>
-
-      <img
-        class="landing--subheadline--logo"
-        src="../assets/gärtopf-white.png"
-        alt="gärtopf"
-      />
     </div>
   </div>
 </template>
 
 <style lang="scss">
 .landing {
-  &--subheadline {
-    display: flex;
-    justify-content: center;
-    margin-top: 45px;
-
-    @media (min-width: 1024px) {
-      margin-top: 35px;
-      justify-content: flex-end;
-    }
-
-    &--logo {
-      height: 115px;
-
-      @media (min-width: 1024px) {
-        height: 230px;
-      }
-    }
-
-    &__text {
-      color: white;
-      font-size: 24px;
-      margin-right: 32px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      font-weight: 300 !important;
-
-      @media (min-width: 1024px) {
-        margin-right: 150px;
-        font-size: 42px;
-        text-align: right;
-      }
-    }
-  }
-
   .stage-image {
     position: relative;
 
-    img {
+    &__img {
       width: 100%;
       object-fit: cover;
       z-index: 0;
