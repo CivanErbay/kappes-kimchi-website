@@ -1,20 +1,24 @@
 @import "./base.css";
 
+@font-face {
+  font-family: "Revive80Phatt";
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  unicode-range: U+000-5FF;
+  src: local("Revive80Phatt.otf"), url("/fonts/Revive80Phatt.otf") format("otf"),
+    url("/fonts/Revive80Phatt.otf") format("otf");
+}
+
 #app {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Lexend Zetta", sans-serif;
   font-weight: 300;
-  color: #181818;
+  /*   background-color: #181818;
+  color: white; */
 
   @media (min-width: 1024px) {
     padding: 2rem;
   }
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
 }
 
 p {
