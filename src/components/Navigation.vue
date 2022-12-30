@@ -10,9 +10,10 @@ const isOpen = ref(true);
       <p @click="isOpen = !isOpen">Übersicht</p>
     </div> -->
     <!--  <div :class="{ openNav: isOpen }" class="navigation--content"> -->
-    <p>Produkte</p>
-    <p>Prinzipien</p>
-    <p>Kontakt</p>
+
+    <a class="nav__product">Produkte</a>
+    <a class="nav__principles">Prinzipien</a>
+    <a class="nav__contact">Kontakt</a>
     <!--   </div> -->
   </nav>
 </template>
@@ -20,5 +21,13 @@ const isOpen = ref(true);
 <style lang="scss">
 .navigation {
   display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+
+  p {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 200;
+  }
 }
 </style>

@@ -54,3 +54,8 @@ p {
     font-size: 2em;
   }
 }
+
+.flipped {
+  transform: scaleX(-1);
+  display: inline-block;
+}
