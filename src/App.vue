@@ -10,7 +10,7 @@ import Description from "./components/Description.vue";
   <div class="content--kappes">
     <header>
       <Logo msg="KAPPES" />
-      <Navigation></Navigation>
+      <!--   <Navigation></Navigation> -->
     </header>
 
     <main>

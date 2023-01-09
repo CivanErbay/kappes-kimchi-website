@@ -21,7 +21,12 @@ defineProps({
 .logo {
   .kappes-headline {
     font-family: "Revive80Phatt", sans-serif;
-    font-size: 64px;
+    font-size: 32px;
+    padding: 30px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 64px;
+    }
   }
 }
 </style>
