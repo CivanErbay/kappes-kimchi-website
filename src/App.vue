@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation.vue";
 import Logo from "./components/Logo.vue";
 import Products from "./components/Products.vue";
 import Description from "./components/Description.vue";
+import Footer from "./components/Footer.vue";
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import Description from "./components/Description.vue";
 
     <main>
       <Landing></Landing>
+      <Footer></Footer>
       <!--  <Products></Products> -->
       <!--  <Description></Description> -->
     </main>
