@@ -6,12 +6,14 @@
   font-style: normal;
   font-display: auto;
   unicode-range: U+000-5FF;
-  src: local("Revive80Phatt.otf"), url("/fonts/Revive80Phatt.otf") format("otf"),
-    url("/fonts/Revive80Phatt.otf") format("otf");
+  src: local("Revive80Phatt.otf"),
+    url("/fonts/Revive80Phatt.otf") format("opentype");
   src: local("/fonts/Revive80Phatt.woff"),
     url("/fonts/Revive80Phatt.woff") format("woff");
-  src: local("/fonts/Revive80Phatt.eot"), url("/fonts/Revive80Phatt.eot");
-  src: local("/fonts/Revive80Phatt.ttf"), url("/fonts/Revive80Phatt.ttf");
+  src: local("/fonts/Revive80Phatt.eot"),
+    url("/fonts/Revive80Phatt.eot") format("embedded-opentype");
+  src: local("/fonts/Revive80Phatt.ttf"),
+    url("/fonts/Revive80Phatt.ttf") format("truetype");
 }
 
 #app {
