@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Revive80Phatt";
-  src: url("/fonts/Revive80Phatt.otf") format("opentype"),
-    url("/fonts/Revive80Phatt.woff") format("woff"),
-    url("/fonts/Revive80Phatt.woff2") format("woff2"),
-    url("/fonts/Revive80Phatt.eot") format("embedded-opentype"),
-    url("/fonts/Revive80Phatt.ttf") format("truetype");
+  src: url("./fonts/Revive80Phatt.otf") format("opentype"),
+    url("./fonts/Revive80Phatt.woff") format("woff"),
+    url("./fonts/Revive80Phatt.woff2") format("woff2"),
+    url("./fonts/Revive80Phatt.eot") format("embedded-opentype"),
+    url("./fonts/Revive80Phatt.ttf") format("truetype");
 }
 
 *,
