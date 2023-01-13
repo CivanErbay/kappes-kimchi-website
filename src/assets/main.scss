@@ -8,9 +8,10 @@
   unicode-range: U+000-5FF;
   src: local("Revive80Phatt.otf"), url("/fonts/Revive80Phatt.otf") format("otf"),
     url("/fonts/Revive80Phatt.otf") format("otf");
-  src: url("/fonts/Revive80Phatt.woff") format("woff");
-  src: url("/fonts/Revive80Phatt.eot");
-  src: url("/fonts/Revive80Phatt.ttf");
+  src: local("/fonts/Revive80Phatt.woff"),
+    url("/fonts/Revive80Phatt.woff") format("woff");
+  src: local("/fonts/Revive80Phatt.eot"), url("/fonts/Revive80Phatt.eot");
+  src: local("/fonts/Revive80Phatt.ttf"), url("/fonts/Revive80Phatt.ttf");
 }
 
 #app {
