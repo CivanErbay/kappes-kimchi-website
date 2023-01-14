@@ -5,23 +5,28 @@ import Logo from "./components/Logo.vue";
 import Products from "./components/Products.vue";
 import Description from "./components/Description.vue";
 import Footer from "./components/Footer.vue";
+import Impressum from "./components/Impressum.vue";
+import { ref } from "vue";
+
+const currPage = ref("landing");
 </script>
 
 <template>
   <div class="kk-content">
     <header>
-      <Logo msg="KAPPES" />
+      <Logo @page-trans="(page) => (currPage = page)" msg="KAPPES" />
       <!--   <Navigation></Navigation> -->
     </header>
 
     <main>
-      <Landing></Landing>
+      <Landing v-if="currPage == 'landing'"></Landing>
 
       <!--  <Products></Products> -->
       <!--  <Description></Description> -->
+      <Impressum v-if="currPage == 'impressum'"></Impressum>
     </main>
 
-    <Footer></Footer>
+    <Footer @page-trans="(page) => (currPage = page)"></Footer>
   </div>
 </template>
 

@@ -2,7 +2,7 @@
 
 <template>
   <div class="kk-footer">
-    <p class="kk-footer__subhl">KAPPES</p>
+    <p @click="$emit('pageTrans', 'landing')"  class="kk-footer__subhl">KAPPES</p>
     <div class="kk-footer__links">
       <div class="kk-footer__social">
         <a href="mailto:kappes-kimchi@gmx.de" target="_blank">
@@ -15,7 +15,12 @@
           />
         </a>
       </div>
-      <button class="kk-footer__legal">IMPRESSUM</button>
+      <button
+        @click="$emit('pageTrans', 'impressum')"
+        class="kk-footer__legal"
+      >
+        IMPRESSUM
+      </button>
     </div>
     <div class="kk-footer__placeholder"></div>
   </div>
@@ -39,6 +44,7 @@
     font-size: 16px;
     margin-top: 10px;
     color: #181818;
+    cursor: pointer;
 
     @media screen and (min-width: 768px) {
       font-size: 22px;
