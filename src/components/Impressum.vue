@@ -53,7 +53,7 @@
     </p>
 
     <h2>Urheberrecht</h2>
-    <p class="kk-impressum--last-child">
+    <p>
       Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen
       Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung,
       Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen
@@ -75,20 +75,20 @@
   display: flex;
   flex-direction: column;
   letter-spacing: -2px;
-  margin-top: 50px;
+  margin: 50px 10px;
 
   h2 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
-    margin: 20px 0;
+    margin: 15px 0;
+
+    &:first-child {
+    font-size: 28px;
+    }
   }
 
   p {
-    font-size: 18px;
-  }
-
-  &--last-child {
-    margin-bottom: 50px;
+    font-size: 12px;
   }
 }
 </style>
