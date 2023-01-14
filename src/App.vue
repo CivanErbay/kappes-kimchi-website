@@ -8,7 +8,7 @@ import Footer from "./components/Footer.vue";
 </script>
 
 <template>
-  <div class="content--kappes">
+  <div class="kk-content">
     <header>
       <Logo msg="KAPPES" />
       <!--   <Navigation></Navigation> -->
@@ -16,22 +16,30 @@ import Footer from "./components/Footer.vue";
 
     <main>
       <Landing></Landing>
-      <Footer></Footer>
+
       <!--  <Products></Products> -->
       <!--  <Description></Description> -->
     </main>
+
+    <Footer></Footer>
   </div>
 </template>
 
 <style lang="scss">
-.content--kappes {
+.kk-content {
   max-width: 1280px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
 
   header {
     display: flex;
     justify-content: space-between;
     line-height: 1;
+  }
+  main {
+    flex: 1;
   }
 }
 </style>

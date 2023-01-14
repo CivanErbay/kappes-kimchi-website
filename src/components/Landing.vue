@@ -26,9 +26,7 @@
   align-items: center;
 
   @media screen and (min-width: 768px) {
-    border-top: 5px solid;
     border-bottom: 5px solid;
-    margin-top: 50px;
     flex-direction: row;
   }
 
