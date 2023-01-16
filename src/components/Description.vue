@@ -10,7 +10,7 @@
 
     <img
       class="description-content--logo"
-      src="../assets/gärtopf-logo.png"
+      src="../assets/illus/gärtopf-logo.png"
       alt="gärtopf"
     />
   </div>
