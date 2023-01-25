@@ -43,7 +43,8 @@ export default {
       "./kimchi8.jpg",
       "./kimchi22.jpg",
       "./kimchi24.jpg",
-      "./kimchi_glas.jpg",
+      "./kimchi_blank.jpg",
+      "./kimchi_paar.jpg",
       "./hanna_civan.jpg",
     ]);
 
@@ -67,6 +68,8 @@ export default {
   @media screen and (min-width: 768px) {
     border-bottom: 5px solid;
     flex-direction: row;
+    height: 650px;
+    width: 430px;
   }
 }
 
