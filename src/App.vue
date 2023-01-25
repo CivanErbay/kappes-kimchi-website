@@ -25,6 +25,10 @@ const currPage = ref("landing");
       <!--  <Products></Products> -->
       <!--  <Description></Description> -->
       <Carousel></Carousel>
+      <div style="font-size: 12px; letter-spacing: -1.5px; margin: 20px 10px">
+        <p>Die Website befindet sich noch im Aufbau.</p>
+        <p>In Kürze finden Sie hier weitere Infos!</p>
+      </div>
       <Impressum v-if="currPage == 'impressum'"></Impressum>
     </main>
 
