@@ -1,19 +1,27 @@
 <template>
-  <div>
-    <h2 class="kk-swiper--headline">Einsicht in unsere Fertigung</h2>
-    <swiper :modules="modules" :loop="true" :pagination="{ clickable: true }">
-      <swiper-slide
-        style="display: flex; justify-content: center"
-        v-for="(image, index) in images"
-        :key="index"
+  <div class="kk-swiper">
+    <div class="kk-swiper--wrapper">
+      <h2 class="kk-swiper--headline">Einsicht in unsere Fertigung</h2>
+      <swiper
+        :modules="[Navigation]"
+        navigation
+        :key="key"
+        :loop="true"
+        :pagination="{ clickable: true }"
       >
-        <img class="swiper-img" :src="image" alt="slider image" />
-      </swiper-slide>
-    </swiper>
+        <swiper-slide
+          style="display: flex; justify-content: center"
+          v-for="(image, index) in images"
+          :key="index"
+        >
+          <img class="swiper-img" :src="image" alt="slider image" />
+        </swiper-slide>
+      </swiper>
+    </div>
   </div>
 </template>
 <script>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Pagination } from "swiper";
@@ -36,6 +44,7 @@ export default {
       "./kimchi22.jpg",
       "./kimchi24.jpg",
       "./kimchi_glas.jpg",
+      "./hanna_civan.jpg",
     ]);
 
     return {
@@ -71,6 +80,12 @@ export default {
     justify-content: center;
     padding: 20px 0 23px;
     letter-spacing: -2px;
+    font-size: 15px;
+    font-weight: bold;
+
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+    }
   }
 }
 
@@ -80,6 +95,15 @@ export default {
 }
 
 .kk-swiper--wrapper {
-  width: 50%;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 50%;
+  }
+}
+.kk-swiper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 40px;
 }
 </style>
