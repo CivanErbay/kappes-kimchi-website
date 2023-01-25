@@ -6,6 +6,7 @@ import Products from "./components/Products.vue";
 import Description from "./components/Description.vue";
 import Footer from "./components/Footer.vue";
 import Impressum from "./components/Impressum.vue";
+import Carousel from "./components/Carousel.vue";
 import { ref } from "vue";
 
 const currPage = ref("landing");
@@ -23,6 +24,7 @@ const currPage = ref("landing");
 
       <!--  <Products></Products> -->
       <!--  <Description></Description> -->
+      <Carousel></Carousel>
       <Impressum v-if="currPage == 'impressum'"></Impressum>
     </main>
 

@@ -1,7 +1,7 @@
 <script setup>
 const imagePaths = [
-  "./kimchi1.jpg",
-  "./kimchi5.jpg",
+  "./photos/kimchi1.jpg",
+  "./photos/kimchi5.jpg",
   "./kimchi6.jpg",
   "./kimchi8.jpg",
   "./kimchi22.jpg",
