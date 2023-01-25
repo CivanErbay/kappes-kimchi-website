@@ -1,6 +1,7 @@
 <template>
   <div>
-    <swiper :options="swiperOptions">
+    <h2 class="kk-swiper--headline">Einsicht in unsere Fertigung</h2>
+    <swiper :modules="modules" :loop="true" :pagination="{ clickable: true }">
       <swiper-slide
         style="display: flex; justify-content: center"
         v-for="(image, index) in images"
@@ -11,37 +12,36 @@
     </swiper>
   </div>
 </template>
-
 <script>
-import SwiperClass, { Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-
+import { ref } from "vue";
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Navigation, Pagination } from "swiper";
+// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 export default {
-  data() {
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    const images = ref([
+      "./kimchi1.jpg",
+      "./kimchi5.jpg",
+      "./kimchi6.jpg",
+      "./kimchi8.jpg",
+      "./kimchi22.jpg",
+      "./kimchi24.jpg",
+      "./kimchi_glas.jpg",
+    ]);
+
     return {
-      swiperOptions: {
-        // options for the swiper
-      },
-      images: [
-        "./kimchi1.jpg",
-        "./kimchi5.jpg",
-        "./kimchi6.jpg",
-        "./kimchi8.jpg",
-        "./kimchi22.jpg",
-        "./kimchi24.jpg",
-        "./kimchi_glas.jpg",
-      ],
-      components: {
-        Swiper,
-        SwiperSlide,
-      },
-      setup() {
-        return {
-          modules: [Pagination],
-        };
-      },
+      Pagination,
+      Navigation,
+      images,
     };
   },
 };
@@ -49,10 +49,37 @@ export default {
 
 <style lang="scss">
 .swiper-img {
-  height: 600px;
-  width: 450px;
+  height: 350px;
+  width: 230px;
   object-fit: cover;
   cursor: pointer;
+  border: 5px white solid;
+
+  @media screen and (min-width: 768px) {
+    border-bottom: 5px solid;
+    flex-direction: row;
+  }
 }
 
+.kk-swiper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &--headline {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 23px;
+    letter-spacing: -2px;
+  }
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: white;
+}
+
+.kk-swiper--wrapper {
+  width: 50%;
+}
 </style>
