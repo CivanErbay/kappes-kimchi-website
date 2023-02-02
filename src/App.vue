@@ -7,6 +7,7 @@ import Description from "./components/Description.vue";
 import Footer from "./components/Footer.vue";
 import Impressum from "./components/Impressum.vue";
 import Carousel from "./components/Carousel.vue";
+import Teaser from "./components/Teaser.vue";
 import { ref } from "vue";
 
 const currPage = ref("landing");
@@ -15,17 +16,21 @@ const currPage = ref("landing");
 <template>
   <div class="kk-content">
     <header>
-      <Logo @page-trans="(page) => (currPage = page)" msg="KAPPES" />
+      <Logo @page-trans="(page) => (currPage = page)" />
       <!--   <Navigation></Navigation> -->
     </header>
 
     <main>
-      <Landing v-if="currPage == 'landing'"></Landing>
+      <!-- <Teaser v-if="currPage == 'landing'"></Teaser> -->
+      <!--    <Landing v-if="currPage == 'landing'"></Landing> -->
 
       <!--  <Products></Products> -->
       <!--  <Description></Description> -->
-      <Carousel></Carousel>
-      <div style="font-size: 12px; letter-spacing: -1.5px; margin: 20px 10px">
+      <Carousel v-if="currPage == 'landing'"></Carousel>
+      <div
+        v-if="currPage == 'landing'"
+        style="font-size: 12px; letter-spacing: -1.5px; margin: 20px 10px"
+      >
         <p>Die Website befindet sich noch im Aufbau.</p>
         <p>In Kürze finden Sie hier weitere Infos!</p>
       </div>
