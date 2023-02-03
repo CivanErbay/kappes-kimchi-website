@@ -14,7 +14,16 @@
           v-for="(image, index) in images"
           :key="index"
         >
-          <img class="swiper-img" :src="image" alt="slider image" />
+          <img
+            class="swiper-img"
+            :src="image"
+            loading="lazy"
+            alt="slider image"
+          />
+          <!--  <img
+            src="../assets/illus/loading-spinner.gif"
+            class="swiper-lazy-preloader"
+          /> -->
         </swiper-slide>
       </swiper>
     </div>
