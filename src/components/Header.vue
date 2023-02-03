@@ -7,7 +7,7 @@
       <h3>Handgemacht.</h3>
       <h3>Probiotisch.</h3>
       <div class="kk-logo--header-wrapper--detail-text">
-        Produziert in Köln, ausschließlich lokal produziertes Gemüse, intensiv
+        Produziert in Köln, ausschließlich lokal erzeugtes Gemüse, intensiv
         im Geschmack & gut für deinen Darm!
       </div>
     </div>
