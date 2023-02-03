@@ -63,10 +63,11 @@ export default {
   width: 230px;
   object-fit: cover;
   cursor: pointer;
-  border: 5px white solid;
+  border: 5px #181818 solid;
+  border-radius: 5px;
 
   @media screen and (min-width: 768px) {
-    border-bottom: 5px solid;
+    border: 10px solid;
     flex-direction: row;
     height: 650px;
     width: 430px;
@@ -99,7 +100,7 @@ export default {
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
-  color: white;
+  color: #181818;
 }
 
 .kk-swiper--wrapper {

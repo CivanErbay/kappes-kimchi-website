@@ -1,24 +1,40 @@
-<script setup></script>
+<script setup>
+import { onMounted } from "vue";
+
+onMounted(() => {
+  window.addEventListener("load", function () {
+    document.getElementById("img-one").style.backgroundColor = "transparent";
+  });
+  window.addEventListener("load", function () {
+    document.getElementById("img-two").style.backgroundColor = "transparent";
+  });
+});
+</script>
 
 <template>
-  <div class="kk-logo">
-    <div class="kk-logo--header-wrapper">
+  <div class="kk-header">
+    <div class="kk-header--header-wrapper">
       <h3>Traditionell.</h3>
       <h3>Handgemacht.</h3>
       <h3>Probiotisch.</h3>
-      <div class="kk-logo--header-wrapper--detail-text">
-        Produziert in Köln, ausschließlich lokal erzeugtes Gemüse, intensiv
-        im Geschmack & gut für deinen Darm!
+      <div class="kk-header--header-wrapper--detail-text">
+        Produziert in Köln, ausschließlich lokal erzeugtes Gemüse, intensiv im
+        Geschmack & gut für deinen Darm!
       </div>
     </div>
 
     <div class="kk-logo--image-wrapper">
       <img
-        class="kk-logo--image-wrapper--img-one"
+        id="img-one"
+        class="kk-header--image-wrapper--img-one"
+        alt="kimchi-glas-circle-lying"
         src="../assets/photos/kimchi_circle.jpg"
       />
+
       <img
-        class="kk-logo--image-wrapper--img-two"
+        id="img-two"
+        class="kk-header--image-wrapper--img-two"
+        alt="kimchi-on-ceramic-floor"
         src="../assets/photos/kimchi_open.jpg"
       />
     </div>
@@ -26,7 +42,7 @@
 </template>
 
 <style scoped lang="scss">
-.kk-logo {
+.kk-header {
   width: 100%;
   color: white;
   background: rgb(24, 24, 24);
@@ -41,6 +57,7 @@
   display: flex;
   justify-content: space-between;
   padding: 25px;
+  border-radius: 5px;
 
   @media screen and (min-width: 1024px) {
     height: 300px;
@@ -119,6 +136,7 @@
         border-right: 0;
         border-top-left-radius: 0;
         border-bottom-right-radius: 0;
+        border-top-right-radius: 5px;
       }
     }
   }
