@@ -77,6 +77,11 @@ export default {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin: 35px 0;
+
+  @media screen and (min-width: 768px) {
+    margin: 60px 0;
+  }
 
   &--headline {
     display: flex;
@@ -103,10 +108,5 @@ export default {
   @media screen and (min-width: 768px) {
     width: 50%;
   }
-}
-.kk-swiper {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0 40px;
 }
 </style>

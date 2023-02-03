@@ -1,13 +1,13 @@
 <script setup>
 import Landing from "./components/Landing.vue";
 import Navigation from "./components/Navigation.vue";
-import Logo from "./components/Logo.vue";
+import Header from "./components/Header.vue";
 import Products from "./components/Products.vue";
 import Description from "./components/Description.vue";
 import Footer from "./components/Footer.vue";
 import Impressum from "./components/Impressum.vue";
 import Carousel from "./components/Carousel.vue";
-import Teaser from "./components/Teaser.vue";
+
 import { ref } from "vue";
 
 const currPage = ref("landing");
@@ -16,12 +16,11 @@ const currPage = ref("landing");
 <template>
   <div class="kk-content">
     <header>
-      <Logo @page-trans="(page) => (currPage = page)" />
-      <!--   <Navigation></Navigation> -->
+      <Navigation></Navigation>
+      <Header @page-trans="(page) => (currPage = page)" />
     </header>
 
     <main>
-      <!-- <Teaser v-if="currPage == 'landing'"></Teaser> -->
       <!--    <Landing v-if="currPage == 'landing'"></Landing> -->
 
       <!--  <Products></Products> -->
@@ -29,7 +28,11 @@ const currPage = ref("landing");
       <Carousel v-if="currPage == 'landing'"></Carousel>
       <div
         v-if="currPage == 'landing'"
-        style="font-size: 12px; letter-spacing: -1.5px; margin: 20px 10px"
+        style="
+          font-size: 14px;
+          margin: 20px 10px;
+          font-family: 'Space Grotesk', sans-serif;
+        "
       >
         <p>Die Website befindet sich noch im Aufbau.</p>
         <p>In Kürze finden Sie hier weitere Infos!</p>
@@ -51,7 +54,7 @@ const currPage = ref("landing");
 
   header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     line-height: 1;
   }
   main {
