@@ -1,8 +1,17 @@
-<script setup></script>
+<script setup>
+import { onMounted, defineEmits } from "vue";
+
+const emit = defineEmits(["backtolanding"]);
+
+onMounted(() => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+</script>
 
 <template>
   <div class="kk-impressum">
-    <h2>Impressum</h2>
+    <a @click="emit('backtolanding')" class="kk-impressum-back">Zurück</a>
+    <h4>Impressum</h4>
     <p>Angaben gemäß § 5 TMG</p>
     <p>Civan Erbay</p>
     <p>Widdersdorfer Str. 230</p>
@@ -77,18 +86,27 @@
   letter-spacing: -2px;
   margin: 50px 10px;
 
-  h2 {
+  h4 {
     font-size: 20px;
     font-weight: bold;
     margin: 15px 0;
 
     &:first-child {
-    font-size: 28px;
+      font-size: 28px;
     }
   }
 
   p {
     font-size: 12px;
+  }
+
+  &-back {
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: fit-content;
+    margin-bottom: 30px;
   }
 }
 </style>

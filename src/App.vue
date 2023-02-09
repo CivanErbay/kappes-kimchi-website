@@ -35,11 +35,14 @@ const childrenLoaded = ref(false);
         <p>Die Website befindet sich noch im Aufbau.</p>
         <p>In Kürze finden Sie hier weitere Infos!</p>
       </div>
-      <Impressum v-if="currPage == 'impressum'"></Impressum>
+      <Impressum
+        @backtolanding="currPage = 'landing'"
+        v-if="currPage == 'impressum'"
+      ></Impressum>
       <Footer @page-trans="(page) => (currPage = page)"></Footer>
     </main>
-    <div class="kk-loading-spinner">
-      <LoadingSpinner v-show="!childrenLoaded"></LoadingSpinner>
+    <div v-show="!childrenLoaded" class="kk-loading-spinner">
+      <LoadingSpinner></LoadingSpinner>
     </div>
   </div>
 </template>
