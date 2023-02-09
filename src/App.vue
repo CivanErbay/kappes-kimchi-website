@@ -7,10 +7,12 @@ import Description from "./components/Description.vue";
 import Footer from "./components/Footer.vue";
 import Impressum from "./components/Impressum.vue";
 import Carousel from "./components/Carousel.vue";
+import LoadingSpinner from "./components/util/LoadingSpinner.vue";
 
 import { ref } from "vue";
 
 const currPage = ref("landing");
+const childrenLoaded = ref(false);
 </script>
 
 <template>
@@ -20,27 +22,25 @@ const currPage = ref("landing");
       <Header @page-trans="(page) => (currPage = page)" />
     </header>
 
-    <main>
+    <main v-show="childrenLoaded">
       <!--    <Landing v-if="currPage == 'landing'"></Landing> -->
 
       <!--  <Products></Products> -->
       <!--  <Description></Description> -->
-      <Carousel v-if="currPage == 'landing'"></Carousel>
-      <div
+      <Carousel
+        @imgloaded="(value) => (childrenLoaded = value)"
         v-if="currPage == 'landing'"
-        style="
-          font-size: 14px;
-          margin: 20px 10px;
-          font-family: 'Space Grotesk', sans-serif;
-        "
-      >
+      ></Carousel>
+      <div v-if="currPage == 'landing'" style="">
         <p>Die Website befindet sich noch im Aufbau.</p>
         <p>In Kürze finden Sie hier weitere Infos!</p>
       </div>
       <Impressum v-if="currPage == 'impressum'"></Impressum>
+      <Footer @page-trans="(page) => (currPage = page)"></Footer>
     </main>
-
-    <Footer @page-trans="(page) => (currPage = page)"></Footer>
+    <div class="kk-loading-spinner">
+      <LoadingSpinner v-show="!childrenLoaded"></LoadingSpinner>
+    </div>
   </div>
 </template>
 
@@ -60,5 +60,13 @@ const currPage = ref("landing");
   main {
     flex: 1;
   }
+}
+
+.kk-loading-spinner {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

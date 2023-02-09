@@ -1,8 +1,6 @@
 <script setup>
-import { onMounted } from "vue";
 import VueLoadImage from "vue-load-image";
-
-onMounted(() => {});
+import LoadingSpinner from "./util/LoadingSpinner.vue";
 </script>
 
 <template>
@@ -17,14 +15,6 @@ onMounted(() => {});
       </div>
     </div>
 
-    <!--   <div class="kk-logo--image-wrapper"> -->
-    <!--  <img
-        id="img-one"
-        class="kk-header--image-wrapper--img-one"
-        alt="kimchi-glas-circle-lying"
-        src="../assets/photos/kimchi_circle.jpg"
-      /> -->
-
     <vue-load-image class="loading-spinner-one">
       <template v-slot:image>
         <img
@@ -34,18 +24,9 @@ onMounted(() => {});
           src="../assets/photos/kimchi_circle.jpg"
         />
       </template>
-      <template v-slot:preloader>
-        <img class="image-gif" src="../assets/illus/loading-spinner.gif" />
-      </template>
+      <template v-slot:preloader> </template>
       <template v-slot:error>Image load fails</template>
     </vue-load-image>
-    <!-- 
-      <img
-        id="img-two"
-        class="kk-header--image-wrapper--img-two"
-        alt="kimchi-on-ceramic-floor"
-        src="../assets/photos/kimchi_open.jpg"
-      /> -->
 
     <vue-load-image class="loading-spinner-two">
       <template v-slot:image>
@@ -56,12 +37,9 @@ onMounted(() => {});
           src="../assets/photos/kimchi_open.jpg"
         />
       </template>
-      <template v-slot:preloader>
-        <img class="image-gif" src="../assets/illus/loading-spinner.gif" />
-      </template>
+      <template v-slot:preloader> </template>
       <template v-slot:error>Image load fails</template>
     </vue-load-image>
-    <!--  </div> -->
   </div>
 </template>
 
@@ -178,7 +156,7 @@ onMounted(() => {});
         bottom: 0;
       }
 
-      .image-gif {
+      .spinner {
         height: 100px;
 
         @media screen and (min-width: 1024px) {
@@ -190,7 +168,7 @@ onMounted(() => {});
       }
     }
     &-two {
-      .image-gif {
+      .spinner {
         height: 100px;
 
         @media screen and (min-width: 1024px) {

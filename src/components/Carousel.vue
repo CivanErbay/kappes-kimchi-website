@@ -3,9 +3,9 @@
     <div class="kk-swiper--wrapper">
       <h2 class="kk-swiper--headline">Einsicht in unsere Fertigung</h2>
       <swiper
+        v-show="imgAccVal >= 11"
         :modules="[Navigation]"
         navigation
-        :key="key"
         :loop="true"
         :pagination="{ clickable: true }"
       >
@@ -19,50 +19,43 @@
             :src="image"
             loading="lazy"
             alt="slider image"
+            @load="triggerLoadVal()"
           />
-          <!--  <img
-            src="../assets/illus/loading-spinner.gif"
-            class="swiper-lazy-preloader"
-          /> -->
         </swiper-slide>
       </swiper>
     </div>
   </div>
 </template>
-<script>
-import { ref, onMounted } from "vue";
-// Import Swiper Vue.js components
+<script setup>
+import { ref, defineEmits } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Navigation, Pagination } from "swiper";
-// Import Swiper styles
+import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import LoadingSpinner from "./util/LoadingSpinner.vue";
 
-export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-  setup() {
-    const images = ref([
-      "./kimchi1.jpg",
-      "./kimchi5.jpg",
-      "./kimchi6.jpg",
-      "./kimchi8.jpg",
-      "./kimchi22.jpg",
-      "./kimchi24.jpg",
-      "./kimchi_blank.jpg",
-      "./kimchi_paar.jpg",
-      "./hanna_civan.jpg",
-    ]);
+const images = ref([
+  "./kimchi1.jpg",
+  "./kimchi5.jpg",
+  "./kimchi6.jpg",
+  "./kimchi8.jpg",
+  "./kimchi22.jpg",
+  "./kimchi24.jpg",
+  "./kimchi_blank.jpg",
+  "./kimchi_paar.jpg",
+  "./hanna_civan.jpg",
+]);
 
-    return {
-      Pagination,
-      Navigation,
-      images,
-    };
-  },
+let imgAccVal = ref(0);
+
+const emit = defineEmits(["imgloaded"]);
+
+const triggerLoadVal = () => {
+  imgAccVal.value++;
+  if (imgAccVal.value >= 11) {
+    emit("imgloaded", true);
+  }
 };
 </script>
 
