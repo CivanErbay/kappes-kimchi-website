@@ -33,7 +33,6 @@ import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import LoadingSpinner from "./util/LoadingSpinner.vue";
 
 const images = ref([
   "./kimchi1.jpg",
