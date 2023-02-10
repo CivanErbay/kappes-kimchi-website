@@ -1,6 +1,5 @@
 <script setup>
 import VueLoadImage from "vue-load-image";
-import LoadingSpinner from "./util/LoadingSpinner.vue";
 </script>
 
 <template>

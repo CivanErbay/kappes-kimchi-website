@@ -1,15 +1,17 @@
 @import "./base.css";
 
 #app {
-  font-family: "Lexend Zetta", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 300;
+}
+
+main {
 }
 
 p {
   //letter-spacing: -1px;
 
   @media (min-width: 1024px) {
-   
   }
 }
 
@@ -19,6 +21,7 @@ p {
 .headline-l {
   font-size: 2.4em;
   font-weight: 600;
+  font-family: "Lexend Zetta", sans-serif;
 
   @media (min-width: 1024px) {
     font-size: 3.2em;
@@ -26,6 +29,7 @@ p {
 }
 .headline-m {
   font-size: 2em;
+  font-family: "Lexend Zetta", sans-serif;
 
   @media (min-width: 1024px) {
     font-size: 2.6em;

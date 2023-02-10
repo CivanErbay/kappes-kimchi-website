@@ -66,6 +66,7 @@ const triggerLoadVal = () => {
   cursor: pointer;
   border: 5px #181818 solid;
   border-radius: 5px;
+  
 
   @media screen and (min-width: 768px) {
     border: 10px solid;
@@ -89,7 +90,6 @@ const triggerLoadVal = () => {
     display: flex;
     justify-content: center;
     padding: 20px 0 23px;
-    letter-spacing: -2px;
     font-size: 15px;
     font-weight: bold;
 

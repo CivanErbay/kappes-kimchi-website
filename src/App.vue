@@ -25,7 +25,7 @@ const childrenLoaded = ref(false);
     <main v-show="childrenLoaded">
       <!--    <Landing v-if="currPage == 'landing'"></Landing> -->
 
-      <!--  <Products></Products> -->
+      <Products></Products>
       <!--  <Description></Description> -->
       <Carousel
         @imgloaded="(value) => (childrenLoaded = value)"

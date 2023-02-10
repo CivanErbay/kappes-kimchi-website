@@ -53,6 +53,16 @@ const isOpen = ref(true);
 
   .kk-subheadline {
     font-size: 14px;
+    font-family: "Lexend Zetta", sans-serif;
+
+    &:last-child {
+      -moz-transform: scale(-1, 1);
+      -webkit-transform: scale(-1, 1);
+      -o-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+      transform: scale(-1, 1);
+      letter-spacing: 1px;
+    }
   }
 
   &--headlines {
