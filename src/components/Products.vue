@@ -66,9 +66,12 @@
       flex-direction: column;
       overflow: hidden;
       padding: 30px 30px 30px 30px;
-      border: 5px solid black;
       border-radius: 5px;
-      box-shadow: 13px 13px 0px 8px #000000;
+
+      @media (min-width: 768px) {
+        border: 5px solid black;
+        box-shadow: 30px 34px 0px 8px #000000;
+      }
 
       .headline-m {
         letter-spacing: -4px;

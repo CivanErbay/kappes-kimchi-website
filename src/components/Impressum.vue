@@ -83,7 +83,6 @@ onMounted(() => {
 .kk-impressum {
   display: flex;
   flex-direction: column;
-  letter-spacing: -2px;
   margin: 50px 10px;
 
   h4 {
