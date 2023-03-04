@@ -3,7 +3,7 @@
 <template>
   <div class="kk-products">
     <div class="kk-products--headline">
-      <h3 class="headline-l">Produkte</h3>
+      <h3 class="headline-l">Products</h3>
       <p class="headline-s">
         Premium Kimchi aus Köln - traditionell nach koreanischer Rezeptur
       </p>

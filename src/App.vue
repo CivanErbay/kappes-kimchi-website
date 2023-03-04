@@ -18,12 +18,12 @@ const childrenLoaded = ref(false);
 <template>
   <div class="kk-content">
     <header>
-      <Navigation></Navigation>
+       <Navigation></Navigation>
       <Header @page-trans="(page) => (currPage = page)" />
     </header>
 
     <main v-show="childrenLoaded">
-      <!--    <Landing v-if="currPage == 'landing'"></Landing> -->
+      <Landing></Landing>
 
       <Products v-if="currPage == 'landing'"></Products>
       <!--  <Description></Description> -->
