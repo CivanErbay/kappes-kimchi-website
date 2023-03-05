@@ -5,7 +5,7 @@
     <div class="kk-products--headline">
       <h3 class="headline-l">Products</h3>
       <p class="headline-s">
-        Premium Kimchi aus Köln - traditionell nach koreanischer Rezeptur
+        Premium Kimchi from Cologne - traditional Korean recipe
       </p>
     </div>
     <div class="kk-products--content">

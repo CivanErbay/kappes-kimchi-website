@@ -26,7 +26,7 @@
           <p class="kk-process-item--headline">Ingredients</p>
           <p>
             For our Kimchi we use locally produced, organic ingredients,
-            unprocessed sea-salt and intense korean gochugaru
+            unprocessed sea-salt and intense korean gochugaru.
           </p>
         </div>
       </div>
@@ -35,8 +35,9 @@
         <div>
           <p class="kk-process-item--headline">Processing</p>
           <p>
-            For our Kimchi we use locally produced, organic ingredients,
-            unprocessed sea-salt and intense korean gochugaru
+            This is followed by a two-week fermentation phase in which the
+            lactic acid bacteria, which are important for the shelf life and
+            aroma, are formed.
           </p>
         </div>
       </div>
@@ -48,8 +49,9 @@
         <div>
           <p class="kk-process-item--headline">Fermentation</p>
           <p>
-            For our Kimchi we use locally produced, organic ingredients,
-            unprocessed sea-salt and intense korean gochugaru
+            The raw material is carefully filled into the traditional clay
+            fermentation pots, weighted with appropriate weights and sealed
+            airtight.
           </p>
         </div>
       </div>
@@ -61,8 +63,8 @@
         <div>
           <p class="kk-process-item--headline">Lacto-Bacteria</p>
           <p>
-            For our Kimchi we use locally produced, organic ingredients,
-            unprocessed sea-salt and intense korean gochugaru
+            Before bottling, we test each fermentation pot for the appropriate
+            acidity level to ensure a safe and shelf-stable product.
           </p>
         </div>
       </div>

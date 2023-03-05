@@ -1,7 +1,7 @@
 <template>
   <div class="kk-swiper">
     <div class="kk-swiper--wrapper">
-      <h2 class="kk-swiper--headline">Einsicht in unsere Fertigung</h2>
+      <h2 class="headline-s">Our production cycle</h2>
       <swiper
         v-show="imgAccVal >= 11"
         :modules="[Navigation]"
